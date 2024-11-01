@@ -107,11 +107,16 @@ public class MainActivity extends AppCompatActivity {
                         try {
                             //Log.d("API_RESPONSE", "Response: " + responseData);
                             JSONObject jsonResponse = new JSONObject(responseData);
-                            String user = jsonResponse.getString("username");
-                            String pass = jsonResponse.getString("password");
-                            Toast.makeText(MainActivity.this, user + " " + pass, Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(MainActivity.this, HomePage.class);
-                            startActivity(intent);
+                            String result = jsonResponse.getString("status");
+                            String outcome = jsonResponse.getString("message");
+                            //Toast.makeText(MainActivity.this, user + " " + pass, Toast.LENGTH_SHORT).show();
+                            if (result == "true") {
+                                Intent intent = new Intent(MainActivity.this, HomePage.class);
+                                startActivity(intent);
+                            }
+                            else {
+                                Toast.makeText(MainActivity.this, "Incorrect details!", Toast.LENGTH_SHORT).show();
+                            }
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
