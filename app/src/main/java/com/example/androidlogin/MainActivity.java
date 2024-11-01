@@ -105,12 +105,12 @@ public class MainActivity extends AppCompatActivity {
                     final String responseData = response.body().string();
                     runOnUiThread(() -> {
                         try {
-                            //Log.d("API_RESPONSE", "Response: " + responseData);
+                            Log.d("API_RESPONSE", "Response: " + responseData);
                             JSONObject jsonResponse = new JSONObject(responseData);
                             String result = jsonResponse.getString("status");
                             String outcome = jsonResponse.getString("message");
                             //Toast.makeText(MainActivity.this, user + " " + pass, Toast.LENGTH_SHORT).show();
-                            if (result == "true") {
+                            if (result.equals("true")) {
                                 Intent intent = new Intent(MainActivity.this, HomePage.class);
                                 startActivity(intent);
                             }

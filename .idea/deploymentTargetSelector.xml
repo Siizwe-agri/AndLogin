@@ -4,10 +4,10 @@
     <selectionStates>
       <SelectionState runConfigName="app">
         <option name="selectionMode" value="DROPDOWN" />
-        <DropdownSelection timestamp="2024-11-01T10:27:59.378945900Z">
+        <DropdownSelection timestamp="2024-11-01T12:45:41.344956900Z">
           <Target type="DEFAULT_BOOT">
             <handle>
-              <DeviceId pluginId="LocalEmulator" identifier="path=C:\Users\Sizwe\.android\avd\Samsung_J2_Ultra_Pro_Max.avd" />
+              <DeviceId pluginId="PhysicalDevice" identifier="serial=GYEM5TMNHYLZ5XXW" />
             </handle>
           </Target>
         </DropdownSelection>
